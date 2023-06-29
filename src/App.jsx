@@ -1,5 +1,6 @@
 import { useState } from 'react'  
 import './App.css'
+import './additional.css'
 import {puppyList} from './data.js'
 
 
@@ -12,7 +13,7 @@ const featuredPup = puppies.find((pup)=> pup.id === featPupId)
 
   return (
     <>
-      <div>
+      <div className='pup'>
       
       { 
    puppies.map((puppy) => {
@@ -22,9 +23,10 @@ const featuredPup = puppies.find((pup)=> pup.id === featPupId)
    })
 }
 
+
 {/* { featPupId && <p>{ featPupId }</p> }  */}
 {featPupId && (
-        <div>
+        <div className='featured'>
           <h2>{featuredPup.name}</h2>
           <ul>
             <li>Age: {featuredPup.age}</li>
